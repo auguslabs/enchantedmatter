@@ -35,7 +35,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
+    width: 50%;
+    max-width: 250px;
     height: 250px;
     perspective: 1000px;
     touch-action: none;
@@ -46,7 +47,8 @@ h1 {
         padding: 4px;
     }
     #cube-container {
-        width: 160px;
+        width: 80%;
+        max-width: 160px;
         height: 160px;
     }
     #cube .front  { transform: translateZ(80px); }
@@ -160,12 +162,11 @@ h1 {
 }
 #cubo-section {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-    background: rgba(0,0,0,0.8);
+    /* background: rgba(0,0,0,0.8); */
 }
 footer {
     padding: 20px;
