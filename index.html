@@ -3,222 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Mi Página Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-            touch-action: none;
-            overflow: hidden;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        
-        .rotate-slow {
-            animation: rotate 30s linear infinite;
-            transform-origin: center;
-            filter: blur(10px);
-            opacity: 0.3;
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        #espiral-section {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .absolute {
-            position: absolute;
-        }
-
-        .inset-0 {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-
-        .-z-10 {
-            z-index: -10;
-        }
-
-        .relative {
-            position: relative;
-        }
-
-        .z-10 {
-            z-index: 10;
-        }
-
-        .flex {
-            display: flex;
-        }
-
-        .items-center {
-            align-items: center;
-        }
-
-        .justify-center {
-            justify-content: center;
-        }
-
-        .h-full {
-            height: 100%;
-        }
-
-        .text-4xl {
-            font-size: 2.25rem;
-        }
-
-        .text-gray-800 {
-            color: #1f2937;
-        }
-
-        .font-bold {
-            font-weight: 700;
-        }
-
-        #cube-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 250px;
-            height: 250px;
-            perspective: 1000px;
-            touch-action: none;
-        }
-
-        @media (max-width: 500px) {
-            #cube-container {
-                width: 160px;
-                height: 160px;
-            }
-        }
-
-        #cube {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.1s ease-out;
-            touch-action: none;
-            transform: rotateX(-30deg) rotateY(-30deg);
-        }
-
-        .cube-face {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: min(24px, 6vw);
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-            transition: box-shadow 0.3s ease;
-            backface-visibility: hidden;
-            touch-action: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .cube-face:hover {
-            box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
-        }
-
-        .front  { 
-            transform: translateZ(125px);
-            background-color: #B0BEC5;
-        }
-        .back   { 
-            transform: rotateY(180deg) translateZ(125px);
-            background-color: #CFD8DC;
-        }
-        .right  { 
-            transform: rotateY(90deg) translateZ(125px);
-            background-color: #B2DFDB;
-        }
-        .left   { 
-            transform: rotateY(-90deg) translateZ(125px);
-            background-color: #FFE0B2;
-        }
-        .top    { 
-            transform: rotateX(90deg) translateZ(125px);
-            background-color: #C5E1A5;
-        }
-        .bottom { 
-            transform: rotateX(-90deg) translateZ(125px);
-            background-color: #B3E5FC;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-                margin: 10px;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <title>Enchanted matter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Bienvenido a Mi Página Web</h1>
-        <p>Este es un archivo HTML básico con un diseño moderno y responsive.</p>
+        <h1 class="index-title">Enchanted Matter</h1>
+        <p>Enchanted Matter is a design research practice dedicated to exploring and illuminating narratives of immigration and marginalized identities.</p>
     </div>
 
-    <section id="espiral-section" class="relative w-full h-screen overflow-hidden">
-        <div class="absolute inset-0 -z-10">
-            <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <defs>
-                    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%">
-                        <stop offset="0%" stop-color="#f5f5f5" />
-                        <stop offset="100%" stop-color="#cccccc" />
-                    </radialGradient>
-                </defs>
-
-                <rect width="100%" height="100%" fill="url(#bgGradient)" />
-
-                <g id="espiral">
-                    <path
-                        d="M 200 200 L 200.60 199.95 L 201.20 199.80 L 201.80 199.55 L 202.40 199.20 L 203.00 198.75 L 203.60 198.20 L 204.20 197.55 L 204.80 196.80 L 205.40 195.95 L 206.00 195.00 L 206.60 193.95 L 207.20 192.80 L 207.80 191.55 L 208.40 190.20 L 209.00 188.75 L 209.60 187.20 L 210.20 185.55 L 210.80 183.80 L 211.40 181.95 L 212.00 180.00 L 212.60 177.95 L 213.20 175.80 L 213.80 173.55 L 214.40 171.20 L 215.00 168.75 L 215.60 166.20 L 216.20 163.55 L 216.80 160.80 L 217.40 157.95 L 218.00 155.00 L 218.60 151.95 L 219.20 148.80 L 219.80 145.55 L 220.40 142.20 L 221.00 138.75 L 221.60 135.20 L 222.20 131.55 L 222.80 127.80 L 223.40 123.95 L 224.00 120.00 L 224.60 115.95 L 225.20 111.80 L 225.80 107.55 L 226.40 103.20 L 227.00 98.75 L 227.60 94.20 L 228.20 89.55 L 228.80 84.80 L 229.40 79.95 L 230.00 75.00 L 230.60 69.95 L 231.20 64.80 L 231.80 59.55 L 232.40 54.20 L 233.00 48.75 L 233.60 43.20 L 234.20 37.55 L 234.80 31.80 L 235.40 25.95 L 236.00 20.00 L 236.60 13.95 L 237.20 7.80 L 237.80 1.55 L 238.40 -4.80 L 239.00 -11.25 L 239.60 -17.80 L 240.20 -24.45 L 240.80 -31.20 L 241.40 -38.05 L 242.00 -45.00 L 242.60 -52.05 L 243.20 -59.20 L 243.80 -66.45 L 244.40 -73.80 L 245.00 -81.25 L 245.60 -88.80 L 246.20 -96.45 L 246.80 -104.20 L 247.40 -112.05 L 248.00 -120.00 L 248.60 -128.05 L 249.20 -136.20 L 249.80 -144.45 L 250.40 -152.80 L 251.00 -161.25 L 251.60 -169.80 L 252.20 -178.45 L 252.80 -187.20 L 253.40 -196.05 L 254.00 -205.00 L 254.60 -214.05 L 255.20 -223.20 L 255.80 -232.45 L 256.40 -241.80 L 257.00 -251.25 L 257.60 -260.80 L 258.20 -270.45 L 258.80 -280.20 L 259.40 -290.05 L 260.00 -300.00"
-                        fill="none"
-                        stroke="#1f2937"
-                        stroke-width="2"
-                    />
-                </g>
-            </svg>
-        </div>
-
+    <!-- Sección del cubo -->
+    <section id="cubo-section">
         <div id="cube-container">
             <div id="cube">
                 <a href="menagerie-of-dreamers.html" class="cube-face front">Menagerie of DREAMers</a>
@@ -229,116 +24,26 @@
                 <a href="palmnameh.html" class="cube-face bottom">Palmnameh</a>
             </div>
         </div>
-
-        <!-- <div class="relative z-10 flex items-center justify-center h-full">
-            <h1 class="text-4xl text-gray-800 font-bold">Tu contenido aquí</h1>
-        </div> -->
     </section>
+
+    <!-- Sección Proyectos -->
+    <section class="section-proyectos">
+        <h2 class="fade-up">Proyectos</h2>
+    </section>
+
+    <!-- Sección Equipo -->
+    <section class="section-equipo">
+        <h2 class="fade-up">Equipo</h2>
+    </section>
+
+    <footer class="fade-up">
+      hecho con <span style="color: #fff; font-size: 1.2em; vertical-align: middle;">&#10084;&#65039;</span> by 
+      <a href="https://www.auguslabs.com" target="_blank">Auguslabs</a>
+    </footer>
 
     <!-- Sonido sutil para los clics en las caras del cubo -->
     <audio id="cube-sound" src="snap.mp3" preload="auto"></audio>
 
-    <script>
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    const espiral = document.getElementById('espiral');
-                    if (entry.isIntersecting) {
-                        espiral.classList.add('rotate-slow');
-                    } else {
-                        espiral.classList.remove('rotate-slow');
-                    }
-                });
-            },
-            { threshold: 0.3 }
-        );
-
-        observer.observe(document.getElementById('espiral-section'));
-
-        // Código para la rotación del cubo
-        const cube = document.getElementById('cube');
-        let isDragging = false;
-        let previousPosition = {
-            x: 0,
-            y: 0
-        };
-        let rotation = {
-            x: -30,
-            y: -30
-        };
-
-        function handleStart(e) {
-            isDragging = true;
-            const touch = e.touches ? e.touches[0] : e;
-            previousPosition = {
-                x: touch.clientX,
-                y: touch.clientY
-            };
-        }
-
-        function handleMove(e) {
-            if (!isDragging) return;
-            e.preventDefault();
-
-            const touch = e.touches ? e.touches[0] : e;
-            const deltaMove = {
-                x: touch.clientX - previousPosition.x,
-                y: touch.clientY - previousPosition.y
-            };
-
-            rotation.y += deltaMove.x * 0.5;
-            rotation.x += deltaMove.y * 0.5;
-
-            cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-
-            previousPosition = {
-                x: touch.clientX,
-                y: touch.clientY
-            };
-        }
-
-        function handleEnd() {
-            isDragging = false;
-        }
-
-        // Eventos táctiles
-        cube.addEventListener('touchstart', handleStart, { passive: false });
-        cube.addEventListener('touchmove', handleMove, { passive: false });
-        cube.addEventListener('touchend', handleEnd);
-
-        // Eventos de mouse
-        cube.addEventListener('mousedown', handleStart);
-        cube.addEventListener('mousemove', handleMove);
-        cube.addEventListener('mouseup', handleEnd);
-        cube.addEventListener('mouseleave', handleEnd);
-
-        // Al cargar la página, asegurarse de que el cubo tenga la rotación inicial
-        cube.style.transform = `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`;
-
-        // Sonido al hacer clic en una cara del cubo
-        const cubeSound = document.getElementById('cube-sound');
-        cubeSound.volume = 1.0;
-        document.querySelectorAll('.cube-face').forEach(face => {
-            face.addEventListener('click', function(e) {
-                e.preventDefault();
-                if (cubeSound) {
-                    cubeSound.currentTime = 0;
-                    cubeSound.play();
-                    console.log('Intentando reproducir sonido desde cara del cubo');
-                }
-                const href = this.getAttribute('href');
-                let navigated = false;
-                const goToHref = () => {
-                    if (!navigated) {
-                        navigated = true;
-                        window.location.href = href;
-                    }
-                };
-                // Navegar cuando termine el sonido, o después de 1 segundo máximo
-                cubeSound.onended = goToHref;
-                setTimeout(goToHref, 1000);
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html> 
