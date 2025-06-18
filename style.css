@@ -42,6 +42,9 @@ h1 {
     background: rgba(0,0,0,0.8);
 }
 @media (max-width: 500px) {
+    body {
+        padding: 4px;
+    }
     #cube-container {
         width: 160px;
         height: 160px;
@@ -52,6 +55,9 @@ h1 {
     #cube .left   { transform: rotateY(-90deg) translateZ(80px); }
     #cube .top    { transform: rotateX(90deg) translateZ(80px); }
     #cube .bottom { transform: rotateX(-90deg) translateZ(80px); }
+    #cubo-section {
+        min-height: 100svh;
+    }
 }
 #cube {
     width: 100%;
