@@ -60,7 +60,7 @@ h1 {
     #cubo-section,
     .section-proyectos,
     .section-equipo {
-        min-height: 100svh;
+        min-height: 50svh;
         padding-top: 25px;
         padding-bottom: 25px;
     }
@@ -145,7 +145,7 @@ h1 {
 }
 .section-proyectos, .section-equipo {
     background: #fff;
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
