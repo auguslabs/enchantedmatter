@@ -46,6 +46,12 @@ h1 {
         width: 160px;
         height: 160px;
     }
+    #cube .front  { transform: translateZ(80px); }
+    #cube .back   { transform: rotateY(180deg) translateZ(80px); }
+    #cube .right  { transform: rotateY(90deg) translateZ(80px); }
+    #cube .left   { transform: rotateY(-90deg) translateZ(80px); }
+    #cube .top    { transform: rotateX(90deg) translateZ(80px); }
+    #cube .bottom { transform: rotateX(-90deg) translateZ(80px); }
 }
 #cube {
     width: 100%;
@@ -66,7 +72,7 @@ h1 {
     justify-content: center;
     font-size: min(24px, 6vw);
     font-weight: bold;
-    color: white;
+    color: rgba(0,0,0,0.8);
     text-decoration: none;
     transition: box-shadow 0.3s ease;
     backface-visibility: hidden;
