@@ -55,8 +55,12 @@ h1 {
     #cube .left   { transform: rotateY(-90deg) translateZ(80px); }
     #cube .top    { transform: rotateX(90deg) translateZ(80px); }
     #cube .bottom { transform: rotateX(-90deg) translateZ(80px); }
-    #cubo-section {
+    #cubo-section,
+    .section-proyectos,
+    .section-equipo {
         min-height: 100svh;
+        padding-top: 25px;
+        padding-bottom: 25px;
     }
 }
 #cube {
