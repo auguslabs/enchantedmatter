@@ -1,1 +1,1 @@
-estudiuo arquitectonico
+estudio arquitectonico
