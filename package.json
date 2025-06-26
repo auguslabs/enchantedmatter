@@ -1,0 +1,21 @@
+{
+  "name": "enchantedmatter",
+  "version": "1.0.0",
+  "description": "estudio arquitectonico",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auguslabs/enchantedmatter.git"
+  },
+  "keywords": ["html5", "tailwindcss", "javascript", "web"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/auguslabs/enchantedmatter/issues"
+  },
+  "homepage": "https://github.com/auguslabs/enchantedmatter#readme"
+}

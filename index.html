@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enchanted Matter - Proyecto</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 ">
+    <div class="container mx-auto py-8">
+        <header class="text-center mb-8">
+            <img src="./public/logo-em" alt="Enchanted Matter Logo"
+                class="mx-auto max-w-xs md:max-w-sm lg:max-w-md mb-4">
+
+        </header>
+
+        <main class="w-full mx-auto space-y-8 ">
+            <!-- Sección cubointro -->
+            <section id="cubointro" class="bg-black bg-opacity-75 rounded-lg shad p-6 h-screen">
+                <div id="cubointro-content" class="flex flex-col items-center justify-around gap-16 py-8 bg-[url('/public/grid-dots.svg')] md:bg-repeat-x">
+                    <h1 class="mt-8 text-3xl font-bold text-center text-gray-300"
+                        style="font-family: 'Playfair Display', serif;">Every Angle Tells a Story</h1>
+                    <p class="mt-2 text-center text-base md:text-lg text-gray-400"
+                        style="font-family: 'Poppins', sans-serif;">Discover how architecture transforms ideas into
+                        bold, enduring spaces</p>
+
+                    <div id="cube-container">
+                        <div id="cube">
+                            <a href="pages/menagerie-of-dreamers.html" class="cube-face front">Menagerie of DREAMers</a>
+                            <a href="pages/adobe-r.html" class="cube-face back">AdobE/R</a>
+                            <a href="pages/sediment-and-stain.html" class="cube-face right">Sediment and stain</a>
+                            <a href="pages/rooted-in-passage.html" class="cube-face left">Rooted in passage</a>
+                            <a href="pages/plume-and-poche.html" class="cube-face top">Plume & poche</a>
+                            <a href="pages/palmnameh.html" class="cube-face bottom">Palmnameh</a>
+                        </div>
+                    </div>
+                    <span class="animate-bounce mt-12">
+                        <span class="text-lg font-semibold cube-colors">Spin the cube and click</span>
+                    </span>
+                </div>
+            </section>
+
+            <!-- Sección proyectos -->
+            <section id="proyectos" class="bg-white rounded-lg shadow-lg p-6">
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Proyectos</h2>
+                    <!-- Contenido de proyectos aquí -->
+                </div>
+            </section>
+
+            <!-- Sección equipos -->
+            <section id="equipos" class="bg-white rounded-lg shadow-lg p-6">
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Equipos</h2>
+                    <!-- Contenido de equipos aquí -->
+                </div>
+            </section>
+
+            <!-- Sección otra seccion -->
+            <section id="otraseccion" class="bg-white rounded-lg shadow-lg p-6">
+                <div>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Otra Sección</h2>
+                    <!-- Contenido de otra sección aquí -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto text-center">
+            &copy; 2025 Enchanted Matter. Todos los derechos reservados.
+        </div>
+    </footer>
+    <!-- Sonido sutil para los clics en las caras del cubo -->
+    <audio id="cube-sound" src="public/snap.mp3" preload="auto"></audio>
+
+    <script src="./src/app.js"></script>
+</body>
+
+</html>
