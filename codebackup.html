@@ -1,0 +1,62 @@
+<!-- Narrative Scroll Section -->
+<section id="narrative-scroll" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden" style="background-image: url('./public/nm-panorama.jpg'); background-size: cover; background-position: center;">
+    <!-- Overlay para oscurecer el fondo y mejorar legibilidad -->
+    <div class="absolute inset-0 bg-black/60 z-0"></div>
+    <!-- Línea vertical animada -->
+    <div id="scroll-thread" class="fixed left-6 top-0 h-full w-1 bg-gradient-to-b from-[#A5C77F] to-transparent z-20 transition-all duration-700" style="height: 0;"></div>
+    <!-- Contenido principal -->
+    <div class="relative z-10 max-w-3xl mx-auto py-24 px-4 flex flex-col gap-16">
+      <!-- Encabezado -->
+      <h2 id="narrative-header" class="text-3xl md:text-5xl font-bold text-white text-left opacity-0 translate-y-8 transition-all duration-1000">Weaving Stories Into Matter</h2>
+      <!-- Bloque 1: Misión -->
+      <div class="flex items-start gap-4 opacity-0 translate-y-8 transition-all duration-1000 narrative-block">
+        <img src="./public/icon-mission.svg" alt="Mission Icon" class="w-12 h-12 object-contain filter blur-sm grayscale opacity-60" />
+        <p class="text-white text-lg md:text-xl font-light bg-black/40 p-4 rounded border-l-4 border-[#A5C77F]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+          Our mission is to transform the built environment by weaving together stories, materials, and communities, creating spaces that resonate with meaning and memory.
+        </p>
+      </div>
+      <!-- Bloque 2: Espíritu del lugar -->
+      <div class="flex items-start gap-4 opacity-0 translate-y-8 transition-all duration-1000 narrative-block">
+        <img src="./public/icon-place.svg" alt="Place Icon" class="w-12 h-12 object-contain filter blur-sm grayscale opacity-60" />
+        <p class="text-white text-lg md:text-xl font-light bg-black/40 p-4 rounded border-l-4 border-[#A5C77F]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+          Rooted in the spirit of New Mexico, our work draws inspiration from the vast desert, open skies, and the rich cultural tapestry that defines this land.
+        </p>
+      </div>
+      <!-- Bloque 3: Fundación e historia -->
+      <div class="flex items-start gap-4 opacity-0 translate-y-8 transition-all duration-1000 narrative-block">
+        <img src="./public/icon-history.svg" alt="History Icon" class="w-12 h-12 object-contain filter blur-sm grayscale opacity-60" />
+        <p class="text-white text-lg md:text-xl font-light bg-black/40 p-4 rounded border-l-4 border-[#A5C77F]" style="font-family: 'Inter', sans-serif; font-weight: 300;">
+          Founded by a collective of makers, designers, and storytellers, our team's history is one of collaboration, experimentation, and a shared passion for revealing the hidden narratives within matter.
+        </p>
+      </div>
+    </div>
+    <script>
+      // Fade-in animación para el header y bloques al hacer scroll
+      document.addEventListener('DOMContentLoaded', function () {
+        const header = document.getElementById('narrative-header');
+        const blocks = document.querySelectorAll('.narrative-block');
+        const thread = document.getElementById('scroll-thread');
+        // Fade-in para el header
+        setTimeout(() => {
+          header.classList.remove('opacity-0', 'translate-y-8');
+        }, 400);
+        // Fade-in para los bloques al hacer scroll
+        function revealBlocks() {
+          const windowHeight = window.innerHeight;
+          blocks.forEach((block, i) => {
+            const rect = block.getBoundingClientRect();
+            if (rect.top < windowHeight - 100) {
+              block.classList.remove('opacity-0', 'translate-y-8');
+            }
+          });
+          // Línea vertical animada
+          const docHeight = document.body.scrollHeight - windowHeight;
+          const scrollY = window.scrollY;
+          let percent = Math.min(scrollY / docHeight, 1);
+          thread.style.height = `${percent * 100}vh`;
+        }
+        window.addEventListener('scroll', revealBlocks);
+        revealBlocks();
+      });
+    </script>
+  </section>

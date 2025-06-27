@@ -10,30 +10,135 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+JP+N:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;500;700;800&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 1s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .fade-in-visible {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100 ">
     <div class="container mx-auto py-8">
-        <header class="text-center mb-8">
-            <img src="./public/logo-em" alt="Enchanted Matter Logo"
-                class="mx-auto max-w-xs md:max-w-sm lg:max-w-md mb-4">
-
+        <header class="fixed top-0 left-0 right-0 z-50 text-center w-full h-auto bg-white/80 backdrop-blur-sm ">
+            <div class="flex items-center justify-start px-4">
+                <img src="./public/logo-em" alt="Enchanted Matter Logo"
+                    class="max-w-xs md:max-w-sm lg:max-w-md">
+            </div>
         </header>
 
-        <main class="w-full mx-auto space-y-8 ">
+        <main class="w-full mx-auto space-y-8 mt-16 md:mt-32">
+            <!-- Narrative Scroll Section ajustada -->
+            <section id="narrative-scroll" class="w-full bg-black/80">
+                <!-- Hero imagen panorámica -->
+                <div class="w-full h-[38vw] min-h-[260px] max-h-[420px] relative flex items-center justify-center"
+                    style="background: #222;">
+                    <img src="./public/nm-section.png" alt="New Mexico Panorama"
+                        class="absolute inset-0 w-full h-full object-cover object-center md:object-top"
+                        style="z-index:1;" />
+                    <div class="absolute inset-0 bg-black/30 z-10"></div>
+                    <h2 class="relative z-20 text-4xl md:text-6xl font-serif text-gray-800 text-center w-full"
+                        style="text-shadow: 0 2px 16px #fff, 0 4px 32px #fff; letter-spacing: -1px;">Weaving
+                        Stories<br>Into Matter</h2>
+                </div>
+                <!-- Bloques de narrativa -->
+                <div class="w-full  py-16 px-4 md:px-0 flex flex-col gap-12 items-center">
+                    <!-- Bloque 1: Misión -->
+                    <div class="flex items-start gap-4 max-w-3xl w-full mx-auto">
+                        <!-- Línea dorada e ícono -->
+                        <div class="flex flex-col items-center mr-2">
+                            <span class="block w-1 h-20 bg-[#bfa76a] rounded-full mb-2"></span>
+                            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+                                <circle cx="14" cy="14" r="13" stroke="#bfa76a" stroke-width="2" />
+                                <path d="M9 14h10M14 9v10" stroke="#bfa76a" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <p class="text-lg md:text-xl font-light text-gray-100 font-sans leading-relaxed">
+                            Enchanted Matter is a design research practice dedicated to exploring and illuminating
+                            narratives of immigration and marginalized identities. Through the harmonious integration of
+                            computational and analog design, we aim to expose the unseen and foster a deeper
+                            understanding of diverse experiences.
+                        </p>
+                    </div>
+                    <!-- Bloque 2: Espíritu del lugar -->
+                    <div class="flex items-start gap-4 max-w-3xl w-full mx-auto">
+                        <div class="flex flex-col items-center mr-2 mt-1">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+                                <rect x="4" y="8" width="20" height="12" rx="6" stroke="#bfa76a" stroke-width="2" />
+                                <circle cx="14" cy="14" r="3" stroke="#bfa76a" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg md:text-xl font-light text-gray-100 font-sans leading-relaxed mb-2">
+                                There is a unique magic in this place—found in its vast skies, expansive landscapes, and
+                                most importantly, in the warmth of its people.
+                            </p>
+                            <p class="text-sm text-gray-100/80 font-sans leading-relaxed">
+                                We aim to expose the unseen, fostering understanding of diverse experiences through the
+                                stories of the people.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Bloque 3: Fundación e historia -->
+                    <div class="flex items-start gap-4 max-w-3xl w-full mx-auto">
+                        <div class="flex flex-col items-center mr-2 mt-1">
+                            <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
+                                <rect x="5" y="5" width="18" height="18" rx="3" stroke="#bfa76a" stroke-width="2" />
+                                <path d="M9 14h10" stroke="#bfa76a" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-lg md:text-xl font-light text-gray-100 font-sans leading-relaxed mb-2">
+                                Enchanted Matter (EM) was founded by Carlos Sabogal and Alaa Quraishi in 2022, with
+                                Zaqueriah Pacheco joining in 2024.
+                            </p>
+                            <p class="text-sm text-gray-100/80 font-sans leading-relaxed">
+                                On deep roots in New Mexico, Carlos and Alaa's first collaborations were at the
+                                University of New Mexico during their architecture studies. Their advanced degrees—Alaa
+                                at the California College of the Arts—brought insights from East and West Coast design
+                                trends, inspiring them to...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
             <!-- Sección cubointro -->
-            <section id="cubointro" class="bg-black/80 rounded-lg shad p-6 h-auto">
+            <section id="cubointro" class="bg-black/80 rounded-lg shad p-6 h-auto ">
                 <div id="cubointro-content"
-                    class="flex flex-col items-center justify-around gap-16 py-8 bg-[url('/public/grid-dots.svg')] bg-repeat">
+                    class="flex flex-col items-center justify-around gap-20 py-8 bg-[url('/public/grid-dots.svg')] bg-repeat pb-12 md:pb-20 lg:pb-24">
                     <div class="space-y-2">
                         <h1 class="mt-2 text-3xl font-bold text-center text-gray-300 "
                             style="font-family: 'Poppins', serif;">Every Angle Tells a Story</h1>
                         <p class="text-center text-base md:text-lg text-gray-400 "
                             style="font-family: 'Poppins', sans-serif;">Discover how architecture transforms ideas into
                             bold, enduring spaces</p>
+                        <div class="animate-bounce text-center flex justify-center w-full">
+                            <span class="text-lg font-semibold cube-colors">Spin the cube and click</span>
+                        </div>
                     </div>
-
-                    <div id="cube-container">
+                    <div id="cube-container" class="mt-12 md:mt-20 lg:mt-24">
                         <div id="cube">
                             <a href="pages/menagerie-of-dreamers.html" class="cube-face front">Menagerie of DREAMers</a>
                             <a href="pages/adobe-r.html" class="cube-face back">AdobE/R</a>
@@ -43,32 +148,125 @@
                             <a href="pages/palmnameh.html" class="cube-face bottom">Palmnameh</a>
                         </div>
                     </div>
-                    <span class="animate-bounce mt-12">
-                        <span class="text-lg font-semibold cube-colors">Spin the cube and click</span>
-                    </span>
+
                 </div>
             </section>
 
-            <!-- Sección proyectos -->
-            <section id="proyectos" class="bg-white rounded-lg shadow-lg p-6">
-                <div>
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Proyectos</h2>
-                    <!-- Contenido de proyectos aquí -->
-                </div>
-            </section>
+
 
             <!-- Sección equipos -->
-            <section id="equipos" class="bg-white rounded-lg shadow-lg p-6">
-                <div>
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Equipos</h2>
-                    <!-- Contenido de equipos aquí -->
+            <section id="team" class="bg-black/80 rounded-lg shadow-lg p-6">
+                <h3
+                    class="text-white text-sm italic font-semibold border-b border-white w-fit pb-2 mb-8 flex items-center">
+                    Transformative Makers
+                    <!-- <span class="inline-block w-2 h-2 border border-white ml-1"></span> -->
+                </h3>
+                <h1 class="text-3xl font-bold text-white text-center mb-6">Team Members</h1>
+                <p class="text-white text-lg text-center mb-12 max-w-3xl mx-auto">
+                    A diverse team blending art, design, and technology to challenge norms and create meaningful
+                    cultural impact
+                </p>
+                <!-- Team Member 1 -->
+                <div id="team-member-one" class="border border-white flex flex-col md:flex-row w-full p-4 gap-6">
+                    <!-- Hijo 1: Imágenes y nombre -->
+                    <div id="team-card-1a"
+                        class="border border-white  flex flex-row md:flex-col items-stretch justify-between w-full md:w-1/3 min-w-[220px] max-w-xs mx-auto gap-0">
+                        <!-- Imagen 1 (izquierda en móvil, arriba en md) -->
+                        <div class="flex items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/alaa-initial.png" alt="alaa-initial"
+                                class="w-20 h-20 md:w-24 md:h-24 object-contain fade-in-right" />
+                        </div>
+                        <!-- Imagen 2 y Nombre -->
+                        <div class="flex flex-col items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/silueta-woman.png" alt="Imagen Alaa"
+                                class="w-16 h-16 md:w-20 md:h-20 object-contain my-2 fade-in-left" />
+                            <span
+                                class="block text-center text-white text-base font-semibold border border-white mt-1 px-2 py-1 w-full md:w-full fade-in-left"
+                                style="box-sizing:border-box;">Alaa Quraishi</span>
+                        </div>
+                    </div>
+                    <!-- Hijo 2: Párrafo -->
+                    <div id="team-card-1b" class="border border-white  flex items-center p-4 w-full md:w-2/3">
+                        <p class="text-white text-base md:text-lg leading-relaxed font-light w-full fade-in-up"
+                            style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                            Now a Visiting Assistant Professor at UNM, focuses her research on non-monetary feminine
+                            labor and marginalized voices. Her work draws on her diverse identity as a Muslim, Lebanese,
+                            Indian woman, and New Mexican, bringing fresh perspectives to her practice.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 (row-reverse en hijo 1) -->
+                <div id="team-member-two"
+                    class="border border-white  flex flex-col md:flex-row-reverse w-full p-4 gap-6 mt-8">
+                    <!-- Hijo 1: Imágenes y nombre (row-reverse) -->
+                    <div id="team-card-2a"
+                        class="border border-white  flex flex-row-reverse md:flex-row items-stretch justify-between w-full md:w-1/3 min-w-[220px] max-w-xs mx-auto gap-0">
+                        <!-- Imagen 1 (derecha en móvil, arriba en md) -->
+                        <div class="flex items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/carlos-initial.png" alt="alaa-initial"
+                                class="w-20 h-20 md:w-24 md:h-24 object-contain fade-in-left" />
+                        </div>
+                        <!-- Imagen 2 y Nombre -->
+                        <div class="flex flex-col items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/silueta-man.png" alt="Imagen Carlos"
+                                class="w-16 h-16 md:w-20 md:h-20 object-contain my-2 fade-in-right" />
+                            <span
+                                class="block text-center text-[#A5C77F] text-base font-semibold border border-white mt-1 px-2 py-1 w-full md:w-full fade-in-right"
+                                style="box-sizing:border-box;">Carlos Sabogal</span>
+                        </div>
+                    </div>
+                    <!-- Hijo 2: Párrafo -->
+                    <div id="team-card-2b" class="border border-white flex items-center p-4 w-full md:w-2/3">
+                        <p class="text-white text-base md:text-lg leading-relaxed font-light w-full fade-in-up"
+                            style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                            is a computational designer who has contributed to large-scale art and architectural
+                            projects. His home fabrication studio allows him to experiment with materials and design
+                            through cultural, environmental, and socio-political lenses, informed by his experience as a
+                            Colombian immigrant.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div id="team-member-three"
+                    class="border border-white  flex flex-col md:flex-row w-full p-4 gap-6 mt-8">
+                    <!-- Hijo 1: Imágenes y nombre -->
+                    <div id="team-card-3a"
+                        class="border border-white  flex flex-row md:flex-col items-stretch justify-between w-full md:w-1/3 min-w-[220px] max-w-xs mx-auto gap-0">
+                        <!-- Imagen 1 (izquierda en móvil, arriba en md) -->
+                        <div class="flex items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/alaa-initial.png" alt="alaa-initial"
+                                class="w-20 h-20 md:w-24 md:h-24 object-contain fade-in-right" />
+                        </div>
+                        <!-- Imagen 2 y Nombre -->
+                        <div class="flex flex-col items-center justify-center w-1/2 md:w-full border border-white">
+                            <img src="./public/silueta-man.png" alt="Imagen Zaquieriah"
+                                class="w-16 h-16 md:w-20 md:h-20 object-contain my-2 fade-in-left" />
+                            <span
+                                class="block text-center text-white text-base font-semibold border border-white mt-1 px-2 py-1 w-full md:w-full fade-in-left"
+                                style="box-sizing:border-box;">Zaqueriah Pacheco</span>
+                        </div>
+                    </div>
+                    <!-- Hijo 2: Párrafo -->
+                    <div id="team-card-3b" class="border border-white  flex items-center p-4 w-full md:w-2/3">
+                        <p class="text-white text-base md:text-lg leading-relaxed font-light w-full fade-in-up"
+                            style="font-family: 'Inter', sans-serif; font-weight: 300;">
+                            is a skilled 3D designer and CNC machinist. His work includes major public and private art
+                            installations, such as sculptures at the Albuquerque Sunport and in Bend, OR. He aims to
+                            bring his technological expertise to even larger, impactful projects.
+                        </p>
+                    </div>
                 </div>
             </section>
+
+
+
 
             <!-- Sección otra seccion -->
             <section id="otraseccion" class="bg-white rounded-lg shadow-lg p-6">
                 <div>
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Otra Sección</h2>
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Other Section</h2>
                     <!-- Contenido de otra sección aquí -->
                 </div>
             </section>
@@ -85,6 +283,20 @@
     <audio id="cube-sound" src="public/snap.mp3" preload="auto"></audio>
 
     <script src="./src/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function revealOnScroll() {
+                document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-up').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 60) {
+                        el.classList.add('fade-in-visible');
+                    }
+                });
+            }
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
 </body>
 
 </html>
