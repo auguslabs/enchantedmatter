@@ -223,3 +223,12 @@ p, .p-light {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
 }
+
+/* Animación personalizada para rotación continua y sutil sobre eje Y (3D) para el hexágono de enchantedbox */
+@keyframes hex-spin-y {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+.animate-hex-spin-y {
+  animation: hex-spin-y 12s linear infinite;
+}

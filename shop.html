@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enchanted Shop</title>
+  <link rel="stylesheet" href="src/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(.4,0,.2,1), transform 1s cubic-bezier(.4,0,.2,1);
+    }
+    .fade-in-visible {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto py-8">
+    <!-- Hero Section -->
+    <section id="shop-hero" class="shop-hero flex flex-col items-center justify-center py-12 bg-gradient-to-tr from-black/80 to-black/60 rounded-lg fade-in-up relative">
+      <h1 class="text-4xl md:text-6xl font-bold text-white mb-2">Enchanted Box</h1>
+      <p class="text-lg md:text-2xl text-gray-300 mb-6">Unique pieces, crafted with story and matter</p>
+      <img src="public/enchanted-hex.svg" alt="Shop Hero" class="w-40 md:w-64 mb-8 fade-in-up" />
+      <!-- Enchanted Hex SVG decorativo -->
+      <!-- <img src="public/enchanted-hex.svg" alt="Enchanted Hex" class="absolute right-6 top-6 w-16 md:w-24 opacity-70 pointer-events-none fade-in-up" style="z-index:1;" /> -->
+    </section>
+
+    <!-- Storytelling Section -->
+    <section id="shop-story" class="shop-story flex flex-col items-center justify-center py-8 px-4 md:px-0 fade-in-up">
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#bfa76a] mb-4">Every piece tells a story</h2>
+      <p class="text-base md:text-lg text-gray-400 max-w-2xl text-center mb-2">
+        Our collection is a journey through the edges of myth and matter. Each object is a unique intersection of tradition, innovation, and the unseen narratives that shape our world.
+      </p>
+      <p class="text-base md:text-lg text-gray-600 max-w-2xl text-center">
+        Discover the spirit woven into every ripple, the poetry in every form, and the craftsmanship that brings stories to life.
+      </p>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="shop-products" class="shop-products grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-16 py-8 fade-in-up">
+      <!-- Product 1 -->
+      <div class="shop-card bg-[#232323] rounded-lg shadow-lg p-6 flex flex-col items-center fade-in-up">
+        <img src="public/ripple-one.jpg" alt="Ripple Vase" class="w-full h-56 object-cover rounded-md mb-4 fade-in-up" />
+        <h3 class="text-xl font-semibold text-white mb-2">Ripple Vase</h3>
+        <p class="text-gray-300 text-center mb-2">A vessel shaped by the echoes of water and memory. Each curve is a tribute to the flow of time and the stories it carries.</p>
+        <span class="text-[#bfa76a] font-bold text-lg mb-2">$120</span>
+        <button class="mt-2 px-6 py-2 border border-[#bfa76a] text-[#bfa76a] rounded-full font-semibold hover:bg-[#bfa76a]/10 transition fade-in-up">View Details</button>
+      </div>
+      <!-- Product 2 -->
+      <div class="shop-card bg-[#232323] rounded-lg shadow-lg p-6 flex flex-col items-center fade-in-up">
+        <img src="public/ripple-two.jpg" alt="Ripple Bowl" class="w-full h-56 object-cover rounded-md mb-4 fade-in-up" />
+        <h3 class="text-xl font-semibold text-white mb-2">Ripple Bowl</h3>
+        <p class="text-gray-300 text-center mb-2">Inspired by the gentle undulations of sand and sea, this bowl invites you to hold a piece of the horizon in your hands.</p>
+        <span class="text-[#bfa76a] font-bold text-lg mb-2">$95</span>
+        <button class="mt-2 px-6 py-2 border border-[#bfa76a] text-[#bfa76a] rounded-full font-semibold hover:bg-[#bfa76a]/10 transition fade-in-up">View Details</button>
+      </div>
+      <!-- Product 3 -->
+      <div class="shop-card bg-[#232323] rounded-lg shadow-lg p-6 flex flex-col items-center fade-in-up">
+        <img src="public/ripple-three.jpg" alt="Ripple Plate" class="w-full h-56 object-cover rounded-md mb-4 fade-in-up" />
+        <h3 class="text-xl font-semibold text-white mb-2">Ripple Plate</h3>
+        <p class="text-gray-300 text-center mb-2">A plate that captures the dance of light and shadow, echoing the subtle poetry of everyday rituals.</p>
+        <span class="text-[#bfa76a] font-bold text-lg mb-2">$80</span>
+        <button class="mt-2 px-6 py-2 border border-[#bfa76a] text-[#bfa76a] rounded-full font-semibold hover:bg-[#bfa76a]/10 transition fade-in-up">View Details</button>
+      </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section id="shop-banner" class="shop-banner bg-[#bfa76a]/10 text-[#bfa76a] text-center py-6 rounded-lg mx-4 md:mx-16 my-8 fade-in-up">
+      Discover the story behind every piece. <span class="italic">Artistry, heritage, and innovation—woven together.</span>
+    </section>
+  </div>
+  <script>
+    // Efecto de entrada para todos los elementos fade-in-up
+    document.addEventListener('DOMContentLoaded', function () {
+      function revealOnLoad() {
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+          el.classList.add('fade-in-visible');
+        });
+      }
+      revealOnLoad();
+    });
+  </script>
+</body>
+</html> 
