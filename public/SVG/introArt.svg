@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1907.29 1074.14" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      .cls-1{fill:#054500;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{stroke:#000;stroke-miterlimit:10;}
+      .cls-2{fill:#e9e0d2;}
+      .cls-4{fill:#49320f;}
+      .cls-5{fill:#404040;}
+      .cls-6{fill:#002073;}
+      .cls-7{fill:#a21b00;}
+    </style>
+  </defs>
+  <g id="Layer_1-2">
+    <rect id="gray-rect" class="cls-5" x=".5" y=".5" width="1906.29" height="1073.14"/>
+    <rect id="black-rect" class="cls-3" x="165.07" y="170.21" width="1597.71" height="733.71"/>
+    <a xlink:href="../green-triangle.html" target="_blank">
+      <polygon id="green-triangle" class="cls-1" points="1510.79 360.91 1307.38 713.23 1714.19 713.23 1510.79 360.91" style="cursor:pointer;"/>
+    </a>
+    <a xlink:href="../blue-hex.html" target="_blank">
+      <polygon id="blue-hex" class="cls-6" points="547.37 333.66 312.49 333.66 195.05 537.07 312.49 740.48 547.37 740.48 664.8 537.07 547.37 333.66" style="cursor:pointer;"/>
+    </a>
+    <a xlink:href="../red-circle.html" target="_blank">
+      <circle id="red-circle" class="cls-7" cx="994.79" cy="537.07" r="178.29" style="cursor:pointer;"/>
+    </a>
+    <a xlink:href="../white-wide-rect.html" target="_blank">
+      <rect id="white-wide-rect" class="cls-2" x="747.93" y="587.56" width="490.29" height="315.43" style="cursor:pointer;"/>
+    </a>
+    <a xlink:href="../brown-rect.html" target="_blank">
+      <rect id="brown-rect" class="cls-4" x="1450.79" y="584.13" width="120" height="315.43" style="cursor:pointer;"/>
+    </a>
+    <a xlink:href="../whit-high-rect.html" target="_blank">
+      <rect id="whit-high-rect" class="cls-2" x="387.07" y="169.27" width="85.71" height="733.71" style="cursor:pointer;"/>
+    </a>
+  </g>
+</svg>
